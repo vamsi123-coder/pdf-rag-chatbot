@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# All dependencies for the PDF RAG Chatbot
+# ──────────────────────────────────────────────────────────────────────────────
+
+streamlit>=1.35.0
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-google-genai>=1.0.0
+langchain-huggingface>=0.0.3
+langgraph>=0.1.0
+faiss-cpu>=1.8.0
+pypdf>=4.2.0
+sentence-transformers>=3.0.0
+python-dotenv>=1.0.0
+google-generativeai>=0.7.0
+tiktoken>=0.7.0

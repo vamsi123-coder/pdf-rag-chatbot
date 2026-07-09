@@ -8,8 +8,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![LangChain](https://img.shields.io/badge/LangChain-0.2+-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain.com)
 [![Google Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
-[![FAISS](https://img.shields.io/badge/FAISS-Vector_Store-0467DF?style=for-the-badge)](https://faiss.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 </div>
 
@@ -39,17 +37,17 @@ Answers are grounded strictly in the content of your documents — if the answer
 ## 🏗️ Architecture
 
 ```
-User Question
-      │
-      ▼
-┌─────────────────────────────────────────────┐
+               User Question
+                    │
+                    ▼
+┌──────────────────────────────────────────────┐
 │                LangGraph Agent               │
-│                                               │
+│                                              │
 │  retrieve  →  build_context  →  generate     │
 │     │                              │         │
 │  FAISS search                  Gemini API    │
 │  (HuggingFace embeddings)                    │
-└─────────────────────────────────────────────┘
+└──────────────────────────────────────────────┘
                     │
                     ▼
         Answer + Source Citations
@@ -71,15 +69,15 @@ User Question
 
 ```
 pdf-rag-chatbot/
-├── app.py               # Streamlit UI — chat interface, sidebar, layout
+├── app.py                # Streamlit UI — chat interface, sidebar, layout
 ├── rag_utils.py          # PDF loading, text cleaning, chunking
 ├── vector_store.py       # FAISS index creation, saving, loading, search
 ├── langgraph_agent.py    # LangGraph pipeline — retrieve, context, generate
-├── style.css              # Custom CSS (UI theme)
+├── style.css             # Custom CSS (UI theme)
 ├── .streamlit/
-│   └── config.toml        # Streamlit theme configuration
-├── requirements.txt       # Python dependencies
-├── .env.example            # Sample environment file (copy to .env)
+│   └── config.toml       # Streamlit theme configuration
+├── requirements.txt      # Python dependencies
+├── .env.example          # Sample environment file (copy to .env)
 └── README.md
 ```
 
@@ -178,15 +176,6 @@ Then open **http://localhost:8501** in your browser.
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue to discuss significant changes before submitting a pull request.
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
-
----
 
 <div align="center">
   Built with ❤️ using LangChain · LangGraph · Google Gemini · FAISS · Streamlit
